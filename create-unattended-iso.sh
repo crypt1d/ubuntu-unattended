@@ -128,7 +128,7 @@ fi
 seed_file="netson.seed"
 if [[ ! -f $tmp/$seed_file ]]; then
     echo -n " downloading $seed_file: "
-    download "https://raw.githubusercontent.com/netson/ubuntu-unattended/master/$seed_file"
+    download "https://raw.githubusercontent.com/crypt1d/ubuntu-unattended/master/$seed_file"
 fi
 
 # install required packages
@@ -169,7 +169,7 @@ cd $tmp/iso_new
 echo en > $tmp/iso_new/isolinux/lang
 
 # set late command
-late_command="chroot /target wget -O /home/$username/start.sh https://github.com/netson/ubuntu-unattended/raw/master/start.sh ;\
+late_command="chroot /target wget -O /home/$username/start.sh https://github.com/crypt1d/ubuntu-unattended/raw/master/start.sh ;\
     chroot /target chmod +x /home/$username/start.sh ;"
 
 # copy the netson seed file to the iso
